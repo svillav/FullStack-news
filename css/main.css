@@ -1,0 +1,62 @@
+img {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+}
+
+figcaption {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text-block {
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.read-more {
+    border: 1px solid red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 20px;
+}
+
+.advertisement {
+    border: 3px solid orange;
+    display: flex;
+    justify-content: center;
+}
+
+.advertisement img {
+    position: relative;
+    margin: 20px 0 20px 0;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.other-news {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.other-news-image {
+    border: 1px solid brown;
+
+}
+
+.other-news img {
+    border: 1px solid violet;
+    
+}
+
+.other-news h3 {
+    border: 1px solid green;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+}
