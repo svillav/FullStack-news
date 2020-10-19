@@ -12,6 +12,7 @@ header {
 
 .top-header p {
     border: 1px solid red;
+    margin: auto;
     padding: 20px;
 }
 
@@ -33,9 +34,14 @@ header {
     border: 1px solid blue;
     position: relative;
     justify-content: space-around;
-    padding: 4vw;
+    margin: auto;
+    padding: 35px 4vw;
     font-size: 20px;
     color: rgb(255, 255, 255);
+}
+
+#sign {
+    display: none;
 }
 
 .date-header {
@@ -58,4 +64,79 @@ header {
 
 nav ul {
     display: none;
+}
+
+
+@media screen and (min-width: 480px) {
+    .top-header i {
+        font-size: 30px;
+    }
+
+    .date-header p {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #bars {
+        display: none;
+    }
+
+    .logo {
+        position: relative;
+        left: -10%;
+    }
+
+    #fullstack {
+        font-size: 50px;
+    }
+
+    #news {
+        font-size: 40px;
+    }
+
+    #user {
+        display: none;
+    }
+
+    #sign {
+        border: 1px solid red;
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        right: 2%;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+    #sign i {
+        padding: 5px;
+        font-size: 22px;
+    }
+
+    .date-header {
+        padding: 0 3%;
+    }
+
+    nav ul {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        background-image: linear-gradient(rgb(15, 15, 15), black);
+    }
+
+    nav ul li {
+        position: relative;
+        padding: 15px 25px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        color: rgb(197, 197, 197);
+        text-decoration: none;
+        text-transform: uppercase;
+    }
 }
