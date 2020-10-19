@@ -5,6 +5,17 @@ img {
     width: 100%;
 }
 
+article {
+    border: 1px solid firebrick;
+    position: relative;
+    margin: 20px;
+}
+
+article figure {
+    border: 1px solid rgb(27, 100, 100);
+    position: relative;
+}
+
 figcaption {
     display: flex;
     justify-content: flex-end;
@@ -13,16 +24,69 @@ figcaption {
 .text-block {
     border: 1px solid blue;
     display: flex;
+    position: relative;
     justify-content: space-around;
     flex-direction: column;
+}
+
+.text-block h1 {
+    border: 1px solid red;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    margin: 30px 0;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.text-block h2 {
+    border: 1px solid red;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    margin: 30px 0;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.text-block p {
+    border: 1px solid fuchsia;
+    display: flex;
+    position: relative;
+    margin: 0 0 15px;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgb(77, 77, 77);
 }
 
 .read-more {
     border: 1px solid red;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    position: relative;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-image: linear-gradient(rgb(64, 169, 255), rgb(0, 140, 255));
+    border-radius: 7px;
     font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+figcaption {
+    border: 1px solid goldenrod;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 4px;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: rgb(90, 90, 90);
 }
 
 .advertisement {
@@ -33,10 +97,23 @@ figcaption {
 
 .advertisement img {
     position: relative;
-    margin: 20px 0 20px 0;
+    margin: 30px 0;
     width: 90%;
     padding: 10px;
     border: 1px solid rgb(204, 204, 204);
+}
+
+.other-news-section {
+    border: 1px solid teal;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 30px 20px;   
+}
+
+.other-news-section .read-more {
+    padding: 4px;
+    font-size: 15px;
 }
 
 .other-news {
@@ -46,12 +123,11 @@ figcaption {
 
 .other-news-image {
     border: 1px solid brown;
-
-}
-
-.other-news img {
-    border: 1px solid violet;
-    
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
 }
 
 .other-news h3 {
@@ -59,4 +135,6 @@ figcaption {
     display: flex;
     position: relative;
     justify-content: flex-start;
+    margin: 20px 0 0;
+    font-size: 5vw;
 }
