@@ -4,7 +4,6 @@ footer {
 }
 
 .links-footer {
-    border: 1px solid brown;
     display: flex;
     position: relative;
     justify-content: center;
@@ -13,7 +12,6 @@ footer {
 }
 
 .links-footer div {
-    border: 1px solid brown;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -21,7 +19,6 @@ footer {
 }
 
 .links-footer h4 {
-    border: 1px solid rgb(0, 255, 0);
     display: flex;
     position: relative;
     justify-content: center;
@@ -32,7 +29,6 @@ footer {
 }
 
 .links-footer ul {
-    border: 1px solid red;
     position: relative;
     padding: 10px;
     line-height: 7vw;
@@ -59,7 +55,6 @@ footer {
 }
 
 .info-footer p {
-    border: 1px solid fuchsia;
     display: flex;
     justify-content: center;
     padding: 5px;
