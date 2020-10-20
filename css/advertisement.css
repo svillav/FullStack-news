@@ -1,0 +1,94 @@
+.advertisement {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+}
+
+.advertisement img {
+    position: relative;
+    margin: 0;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid rgb(236, 236, 236);
+}
+
+#double-ketchup, #double-advil, #advil-last {
+    display: none;
+}
+
+@media screen and (min-width: 480px) {
+    .advertisement {
+        justify-content: space-around;
+        flex-direction: row;
+        width: 45%;
+        margin: auto;
+        padding: 0;
+    }
+    
+    #double-ketchup, #double-advil {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .advertisement {
+        flex-direction: column;
+    }
+
+    aside .advertisement {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+
+    .advertisement img {
+        width: 220px;
+    }
+
+    #bottom-advertisement {
+        justify-content: space-around;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    #bottom-advertisement img {
+        width: 320px;
+        padding: 20px 40px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #advil-last {
+        display: flex;
+    }
+
+    #bottom-advertisement img {
+        width: 270px;
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .advertisement img {
+        width: 270px;
+    }
+
+    #bottom-advertisement img {
+        width: 300px;
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .advertisement img {
+        width: 300px;
+    }
+
+    #bottom-advertisement img {
+        width: 350px;
+        padding: 10px 20px;
+    }
+}
