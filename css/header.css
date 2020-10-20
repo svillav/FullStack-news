@@ -59,7 +59,7 @@ header {
 .date-header p {
     position: relative;
     padding: 10px;
-    font-size: 3.5vw;
+    font-size: 3vw;
     text-transform: uppercase;
 }
 
@@ -123,7 +123,7 @@ nav ul {
     }
 
     #sign i {
-        padding: 5px;
+        padding: 10px;
         font-size: 22px;
     }
 
@@ -154,12 +154,13 @@ nav ul {
 
     nav ul li a:hover {
         font-size: 18px;
-        color: rgb(128, 198, 255);
+        color: rgb(78, 175, 255);
     }
 }
 
 @media screen and (min-width: 900px) {
     .top-header {
+        margin-top: 20px;
         background-image: linear-gradient(rgb(253, 253, 253), rgb(243, 243, 243));
     }
 
@@ -178,14 +179,27 @@ nav ul {
         color: rgb(226, 226, 226);
     }
 
-    #sign p {
+    #sign a {
+        padding: 13px;
         background-color: rgb(26, 26, 26);
         border-radius: 8px;
     }
 
+    #sign a:hover {
+        background-image: linear-gradient(rgb(202, 202, 202), rgb(231, 231, 231));
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+    }
+
     #sign i {
+        left: 40px;
         font-size: 30px;
         color: black;
+    }
+
+    #signin {
+        position: relative;
+        left: 30px;
     }
 
     .date-header {

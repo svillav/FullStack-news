@@ -69,7 +69,7 @@ figcaption {
 }
 
 .read-more:hover {
-    background-image: linear-gradient(rgb(0, 140, 255), rgb(109, 195, 221));
+    background-image: linear-gradient(rgb(0, 140, 255), rgb(70, 160, 187));
 }
 
 figcaption {
@@ -97,7 +97,7 @@ figcaption {
     margin: 0;
     width: 90%;
     padding: 10px;
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid rgb(236, 236, 236);
 }
 
 #double-ketchup, #double-advil, #advil-last {
@@ -108,12 +108,16 @@ figcaption {
     display: flex;
     position: relative;
     flex-direction: column;
-    margin: 10px 15px 10px;   
+    margin: 10px 15px 10px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px rgb(192, 192, 192);   
 }
 
 .other-news {
     display: inline-flex;
     justify-content: center;
+    padding: 0px 10px;
 }
 
 .other-news-image {
