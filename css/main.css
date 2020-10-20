@@ -105,7 +105,7 @@ figcaption {
     border: 1px solid rgb(204, 204, 204);
 }
 
-#double-ketchup, #double-advil {
+#double-ketchup, #double-advil, #advil-last {
     display: none;
 }
 
@@ -265,10 +265,108 @@ figcaption {
     #bottom-advertisement {
         justify-content: space-around;
         flex-direction: row;
+        margin: auto;
+    }
+
+    #bottom-advertisement img {
+        width: 320px;
+        padding: 20px 40px;
+    }        
+}
+
+@media screen and (min-width: 900px) {
+    #advil-last {
+        display: flex;
+    }
+
+    #bottom-advertisement img {
+        width: 270px;
+        padding: 20px 10px;
+    }        
+}
+
+@media screen and (min-width: 1024px) {
+    .text-block h1 {
+        font-size: 50px;
+    }
+
+    .text-block p {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .advertisement img {
+        width: 270px;
+    }
+
+    .read-more {
+        font-size: 23px;
+    }
+
+    #second-article h2 {
+        font-size: 40px;
+    }
+
+    #second-article p {
+        font-size: 23px;
+    }
+
+    .other-news-section .read-more {
+        font-size: 18px;
+    }
+
+    .other-news h3 {
+        font-size: 25px;
+    }
+
+    #bottom-advertisement img {
+        width: 300px;
+        padding: 20px 20px;
+    }  
+}
+
+@media screen and (min-width: 1200px) {
+    .text-block h1 {
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+
+    .read-more {
+        padding: 10px;
+        font-size: 23px;
+    }
+
+    .advertisement img {
+        width: 300px;
+    }
+
+    figcaption {
+        font-size: 20px;
+    }
+
+    #second-article h2 {
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+
+    #second-article p {
+        font-size: 23px;
+    }
+
+    .other-news {
+        padding: 10px;
+    }
+
+    .other-news-section .read-more {
+        font-size: 19px;
+    }
+
+    .other-news h3 {
+        font-size: 29px;
     }
 
     #bottom-advertisement img {
         width: 350px;
-        padding: 20px 30px;
-    }        
+        padding: 10px 20px;
+    }  
 }

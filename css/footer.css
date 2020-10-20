@@ -122,3 +122,37 @@ footer {
         font-size: 17px;
     }    
 }
+
+@media screen and (min-width: 1024px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .links-footer {
+        margin-left: 5%;
+    }
+
+    .links-footer h4 {
+        font-size: 27px;
+    }
+
+    .links-footer ul {
+        line-height: 34px;
+    }
+
+    .links-footer li a {
+        font-size: 20px;
+    }
+
+    .info-footer {
+        align-items: flex-end;
+        flex-direction: column;
+        margin: auto;
+    }
+    
+    .info-footer p {
+        padding: 40px;
+        font-size: 18px;
+    }
+}

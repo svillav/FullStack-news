@@ -51,7 +51,7 @@ header {
     background-image: linear-gradient(rgb(26, 26, 26), black);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
-    color: rgb(216, 216, 216);
+    color: rgb(235, 235, 235);
 }
 
 .date-header p {
@@ -150,5 +150,54 @@ nav ul {
         color: rgb(216, 216, 216);
         text-decoration: none;
         text-transform: uppercase;
+    }
+
+    nav ul li a:hover {
+        font-size: 18px;
+        color: rgb(128, 198, 255);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .top-header {
+        background-image: linear-gradient(rgb(253, 253, 253), rgb(243, 243, 243));
+    }
+
+    #fullstack {
+        font-size: 57px;
+        color: black;
+    }
+
+    #news {
+        font-size: 47px;
+        color: rgb(0, 113, 206);
+    }
+
+    #sign {
+        font-size: 21px;
+        color: black;
+    }
+
+    #sign i {
+        font-size: 30px;
+        color: black;
+    }
+
+    .date-header {
+        background-image: linear-gradient(rgb(241, 241, 241), rgb(252, 252, 252));
+    }
+
+    .date-header p {
+        font-size: 16px;
+        color: black;
+    }
+
+    nav ul li {
+        border: 1px solid rgb(27, 27, 27);
+        padding: 25px 30px;
+    }
+
+    nav ul li a {
+        font-size: 17px;
     }
 }
