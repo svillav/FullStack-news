@@ -49,50 +49,51 @@
         <div class="form-header-text">
             <p>Subscribe to receive the right news at the right time!</p>
         </div>
-        <form>
+        <form id="form">
             <div class="input-section">
                 <div class="form-col">
                     <div class="form-field">
-                        <label for="inputFullName">Full Name</label>
-                        <input type="text" class="form-control" id="inputFullName" placeholder="Ex: John Doe">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" max="10" placeholder="Ex: John Doe"></input>
+                        <small id="demo"></small>
                     </div>
                     <div class="form-field">
-                        <label for="inputEmail">Email</label>
-                        <input type="email" class="form-control" id="inputEmail">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Ex: example@domain.com">
                     </div>
                     <div class="form-field">
-                        <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Ex: ABCD1234">
                     </div>
                     <div class="form-field">
-                        <label for="inputAge">Age</label>
-                        <input type="number" class="form-control" id="inputAge">
+                        <label for="age">Age</label>
+                        <input type="number" id="age">
                     </div>
                     <div class="form-field">
-                        <label for="inputIdCard">ID Card</label>
-                        <input type="idCard" class="form-control" id="inputIdCard">
+                        <label for="idCard">ID Card</label>
+                        <input type="idCard" id="idCard" placeholder="Ex: 12.345.678">
                     </div>
                 </div>
                 <div id="form-col2" class="form-col">
                     <div class="form-field">
-                        <label for="inputPhoneNumber">Phone Number</label>
-                        <input type="phoneNumber" class="form-control" id="inputPhoneNumber">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="phoneNumber" id="phoneNumber" placeholder="Ex: 7654321">
                     </div>
                     <div class="form-field">
-                        <label for="inputAddress">Address</label>
-                        <input type="address" class="form-control" id="inputAddress" placeholder="Ex: 1234 Main St">
+                        <label for="address">Address</label>
+                        <input type="address" id="address" placeholder="Ex: 1234 Main St">
                     </div>
                     <div class="form-field">
-                        <label for="inputCity">City</label>
-                        <input type="city" class="form-control" id="inputCity">
+                        <label for="city">City</label>
+                        <input type="city" id="city">
                     </div>
                     <div class="form-field">
-                        <label for="inputZip">ZIP</label>
-                        <input type="zip" class="form-control" id="inputZip">
+                        <label for="zip">ZIP</label>
+                        <input type="zip" id="zip" placeholder="Ex: 200">
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" id="submit" value="Submit"></input>
         </form>
     </section>
 
@@ -131,6 +132,8 @@
             </div>
         </footer>
     </section>
+
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
