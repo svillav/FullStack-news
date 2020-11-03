@@ -1,6 +1,7 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
+const password = document.getElementById('password');
 const submit = document.getElementById('submit');
 
 username.focus();
@@ -22,9 +23,10 @@ username.addEventListener('focus', function() {
     setSuccessFor(username);
 })
 
+
 email.addEventListener('blur', function() {
     const emailValue = email.value.trim();
-    if (emailValue.length < 7 || emailValue.indexOf(' ') === -1) {
+    if (!isEmail(emailValue)) {
         setErrorFor(email);
     } else {
         setSuccessFor(email);
@@ -34,6 +36,31 @@ email.addEventListener('blur', function() {
 email.addEventListener('focus', function() {
     setSuccessFor(email);
 })
+
+
+
+password.addEventListener('blur', function() {
+    const passwordValue = password.value.trim();
+    var regularExpression = /[^0-9a-zA-Z]/;
+    if (passwordValue.length < 8 || regularExpression.test(passwordValue)) {
+        setErrorFor(password);
+    } else {
+        setSuccessFor(password);
+    }
+})
+
+password.addEventListener('focus', function() {
+    setSuccessFor(password);
+})
+
+
+
+
+
+
+
+
+
 
 function setErrorFor(input) {
     const formField = input.parentElement;
@@ -49,4 +76,8 @@ function setSuccessFor(input) {
     const formInput = formField.querySelector('input');
     errorElement.style.visibility = 'hidden';
     formInput.style.border = '1px solid rgb(23, 219, 23)';
+}
+
+function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
