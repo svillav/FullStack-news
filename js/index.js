@@ -10,13 +10,13 @@ const city = document.getElementById('city');
 const zip = document.getElementById('zip');
 const submit = document.getElementById('submit');
 const error = document.getElementsByClassName('error');
-
-zip.focus();
+var successAlert = '';
+var errorAlert = '';
+var errorCount = 0;
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-});
-
+})
 
 // Username Validation
 username.addEventListener('blur', function() {
@@ -24,11 +24,15 @@ username.addEventListener('blur', function() {
     if (usernameValue.length < 7) {
         error[0].innerHTML = 'It must have more than 6 letters.';
         setErrorFor(username);
+        errorCount += 1;
     } else if (usernameValue.indexOf(' ') === -1) {
         error[0].innerHTML = 'It must have a space between names.';
         setErrorFor(username);
+        errorCount += 1;
     } else {
         setSuccessFor(username);
+        if (errorCount > 0) errorCount -= 1;
+        successAlert += `Username: ${usernameValue}\n`;
     }
 })
 username.addEventListener('focus', function() {
@@ -43,6 +47,7 @@ email.addEventListener('blur', function() {
         setErrorFor(email);
     } else {
         setSuccessFor(email);
+        successAlert += `Email: ${emailValue}\n`;
     }
 })
 email.addEventListener('focus', function() {
@@ -62,6 +67,7 @@ password.addEventListener('blur', function() {
         setErrorFor(password);
     } else {
         setSuccessFor(password);
+        successAlert += `Password: ${passwordValue}\n`;
     }
 })
 password.addEventListener('focus', function() {
@@ -76,6 +82,7 @@ age.addEventListener('blur', function() {
         setErrorFor(age);
     } else {
         setSuccessFor(age);
+        successAlert += `Age: ${ageValue}\n`;
     }
 })
 age.addEventListener('focus', function() {
@@ -90,6 +97,7 @@ idCard.addEventListener('blur', function() {
         setErrorFor(idCard);
     } else {
         setSuccessFor(idCard);
+        successAlert += `ID Card: ${idCardValue}\n`;
     }
 })
 idCard.addEventListener('focus', function() {
@@ -107,6 +115,7 @@ phoneNumber.addEventListener('blur', function() {
         setErrorFor(phoneNumber);
     } else {
         setSuccessFor(phoneNumber);
+        successAlert += `Phone Number: ${phoneNumberValue}\n`;
     }
 })
 phoneNumber.addEventListener('focus', function() {
@@ -129,6 +138,7 @@ address.addEventListener('blur', function() {
         setErrorFor(address);
     } else {
         setSuccessFor(address);
+        successAlert += `Address: ${addressValue}\n`;
     }
 })
 address.addEventListener('focus', function() {
@@ -147,6 +157,7 @@ city.addEventListener('blur', function() {
         setErrorFor(city);
     } else {
         setSuccessFor(city);
+        successAlert += `City: ${cityValue}\n`;
     }
 })
 city.addEventListener('focus', function() {
@@ -161,6 +172,7 @@ zip.addEventListener('blur', function() {
         setErrorFor(zip);
     } else {
         setSuccessFor(zip);
+        successAlert += `ZIP: ${zipValue}\n`;
     }
 })
 zip.addEventListener('focus', function() {
@@ -185,3 +197,12 @@ function setSuccessFor(input) {
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+
+
+submit.addEventListener('click', function() {
+    if (errorCount === 0) {
+        alert(successAlert);
+    } else {
+        alert(errorAlert);
+    }
+})

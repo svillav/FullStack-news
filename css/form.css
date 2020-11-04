@@ -44,6 +44,7 @@ form {
     border: 1px solid green;
     display: flex;
     flex-direction: column;
+    height: 68px;
     margin: 10px;
     padding: 10px;
 }
@@ -117,10 +118,10 @@ form {
         columns: 2;
     }
     .form-col {
-        height: 550px;
+        height: 500px;
     }
     #form-col2 {
-        height: 550px;
+        height: 500px;
     }
     .form-field label {
         font-size: 18px;
@@ -144,10 +145,10 @@ form {
         font-weight: 400;
     }
     .form-col {
-        height: 605px;
+        height: 500px;
     }
     #form-col2 {
-        height: 605px;
+        height: 500px;
     }
     .form-field label {
         font-size: 20px;
