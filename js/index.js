@@ -10,14 +10,20 @@ const city = document.getElementById('city');
 const zip = document.getElementById('zip');
 const submit = document.getElementById('submit');
 const error = document.getElementsByClassName('error');
-var alertMessage = '';
+var dataMessage = '';
+var errorMessage = '';
 
 form.addEventListener('submit', e => {
     e.preventDefault();
 })
 
 submit.addEventListener('click', function() {
-    alert(alertMessage);
+    if (errorMessage === '') {
+        alert(dataMessage);
+    } else {
+        alert(errorMessage);
+        errorMessage = '';
+    }
 })
 
 // Username Validation
@@ -26,14 +32,14 @@ username.addEventListener('blur', function() {
     if (usernameValue.length < 7) {
         error[0].innerHTML = 'It must have more than 6 letters.';
         setErrorFor(username);
-        alertMessage += 'Username must have more than 6 letters.\n';
+        errorMessage += 'Username must have more than 6 letters.\n';
     } else if (usernameValue.indexOf(' ') === -1) {
         error[0].innerHTML = 'It must have a space between names.';
         setErrorFor(username);
-        alertMessage += 'Username must have a space between names.\n';
+        errorMessage += 'Username must have a space between names.\n';
     } else {
         setSuccessFor(username)
-        alertMessage += `Username: ${usernameValue}\n`;
+        dataMessage += `Username: ${usernameValue}\n`;
     }
 })
 username.addEventListener('focus', function() {
@@ -46,10 +52,10 @@ email.addEventListener('blur', function() {
     if (!isEmail(emailValue)) {
         error[1].innerHTML = 'It must be a valid email.';
         setErrorFor(email);
-        alertMessage += 'Email must be a valid email.\n';
+        errorMessage += 'Email must be a valid email.\n';
     } else {
         setSuccessFor(email);
-        alertMessage += `Email: ${emailValue}\n`;
+        dataMessage += `Email: ${emailValue}\n`;
     }
 })
 email.addEventListener('focus', function() {
@@ -64,14 +70,14 @@ password.addEventListener('blur', function() {
     if (passwordValue.length < 8) {
         error[2].innerHTML = 'It must be at least 8 characters long.';
         setErrorFor(password);
-        alertMessage += 'Password must be at least 8 characters long.\n';
+        errorMessage += 'Password must be at least 8 characters long.\n';
     } else if (!regAlfExp.test(passwordValue) || !regNumExp.test(passwordValue)) {
         error[2].innerHTML = 'It must have numbers and letters.';
         setErrorFor(password);
-        alertMessage += 'Password must have numbers and letters.\n';
+        errorMessage += 'Password must have numbers and letters.\n';
     } else {
         setSuccessFor(password);
-        alertMessage += `Password: ${passwordValue}\n`;
+        dataMessage += `Password: ${passwordValue}\n`;
     }
 })
 password.addEventListener('focus', function() {
@@ -84,10 +90,10 @@ age.addEventListener('blur', function() {
     if (ageValue < 18 || !Number.isInteger(Number(ageValue))) {
         error[3].innerHTML = 'Must be 18 or over.';
         setErrorFor(age);
-        alertMessage += 'Age must be 18 or over.\n';
+        errorMessage += 'Age must be 18 or over.\n';
     } else {
         setSuccessFor(age);
-        alertMessage += `Age: ${ageValue}\n`;
+        dataMessage += `Age: ${ageValue}\n`;
     }
 })
 age.addEventListener('focus', function() {
@@ -100,10 +106,10 @@ idCard.addEventListener('blur', function() {
     if (idCardValue.length < 7 || idCardValue.length > 8) {
         error[4].innerHTML = 'It must be a 7 or 8 digit number.';
         setErrorFor(idCard);
-        alertMessage += 'ID Card must be a 7 or 8 digit number.\n';
+        errorMessage += 'ID Card must be a 7 or 8 digit number.\n';
     } else {
         setSuccessFor(idCard);
-        alertMessage += `ID Card: ${idCardValue}\n`;
+        dataMessage += `ID Card: ${idCardValue}\n`;
     }
 })
 idCard.addEventListener('focus', function() {
@@ -116,14 +122,14 @@ phoneNumber.addEventListener('blur', function() {
     if (phoneNumberValue.length < 7) {
         error[5].innerHTML = 'It must have at least 7 digits.';
         setErrorFor(phoneNumber);
-        alertMessage += 'Phone Number must have at least 7 digits.\n';
+        errorMessage += 'Phone Number must have at least 7 digits.\n';
     } else if (phoneNumberValue.indexOf('-') !== -1) {
         error[5].innerHTML = 'It should not contain hyphens.';
         setErrorFor(phoneNumber);
-        alertMessage += 'Phone Number should not contain hyphens.\n';
+        errorMessage += 'Phone Number should not contain hyphens.\n';
     } else {
         setSuccessFor(phoneNumber);
-        alertMessage += `Phone Number: ${phoneNumberValue}\n`;
+        dataMessage += `Phone Number: ${phoneNumberValue}\n`;
     }
 })
 phoneNumber.addEventListener('focus', function() {
@@ -138,17 +144,18 @@ address.addEventListener('blur', function() {
     if (addressValue.length < 5) {
         error[6].innerHTML = 'It must be at least 5 characters long.';
         setErrorFor(address);
+        errorMessage += 'Address must be at least 5 characters long.\n';
     } else if (!regAlfExp.test(addressValue) || !regNumExp.test(addressValue)) {
         error[6].innerHTML = 'It must have numbers and letters.';
         setErrorFor(address);
-        alertMessage += 'Address must have numbers and letters.\n';
+        errorMessage += 'Address must have numbers and letters.\n';
     } else if (addressValue.indexOf(' ') === -1) {
         error[6].innerHTML = 'It must have a space between.';
         setErrorFor(address);
-        alertMessage += 'Address must have a space between.\n';
+        errorMessage += 'Address must have a space between.\n';
     } else {
         setSuccessFor(address);
-        alertMessage += `Address: ${addressValue}\n`;
+        dataMessage += `Address: ${addressValue}\n`;
     }
 })
 address.addEventListener('focus', function() {
@@ -162,14 +169,14 @@ city.addEventListener('blur', function() {
     if (regAlfExp.test(cityValue)) {
         error[7].innerHTML = 'It must contain letters only.';
         setErrorFor(city);
-        alertMessage += 'City must contain letters only.\n';
+        errorMessage += 'City must contain letters only.\n';
     } else if (cityValue.length < 3) {
         error[7].innerHTML = 'It must be at least 3 letters long.';
         setErrorFor(city);
-        alertMessage += 'City must be at least 3 letters long.\n';
+        errorMessage += 'City must be at least 3 letters long.\n';
     } else {
         setSuccessFor(city);
-        alertMessage += `City: ${cityValue}\n`;
+        dataMessage += `City: ${cityValue}\n`;
     }
 })
 city.addEventListener('focus', function() {
@@ -182,10 +189,10 @@ zip.addEventListener('blur', function() {
     if (zipValue.length < 3) {
         error[8].innerHTML = 'It must contain at least 3 characters.';
         setErrorFor(zip);
-        alertMessage += 'ZIP must contain at least 3 characters.\n';
+        errorMessage += 'ZIP must contain at least 3 characters.\n';
     } else {
         setSuccessFor(zip);
-        alertMessage += `ZIP: ${zipValue}\n`;
+        dataMessage += `ZIP: ${zipValue}\n`;
     }
 })
 zip.addEventListener('focus', function() {
