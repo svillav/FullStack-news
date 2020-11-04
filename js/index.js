@@ -3,6 +3,7 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const age = document.getElementById('age');
+const idCard = document.getElementById('idCard');
 const submit = document.getElementById('submit');
 const error = document.getElementsByClassName('error');
 
@@ -83,6 +84,20 @@ age.addEventListener('focus', function() {
     setSuccessFor(age);
 })
 
+// ID Card Validation
+idCard.addEventListener('blur', function() {
+    const idCardValue = idCard.value.trim();
+    if (idCardValue.length < 7 || idCardValue.length > 8) {
+        error[4].style.visibility = 'visible';
+        error[4].innerHTML = 'It must be a 7 or 8 digit number.';
+        setErrorFor(idCard);
+    } else {
+        setSuccessFor(idCard);
+    }
+})
+idCard.addEventListener('focus', function() {
+    setSuccessFor(idCard);
+})
 
 
 
