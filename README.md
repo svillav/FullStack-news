@@ -1,4 +1,4 @@
 # GitHub Pages link 
 ---
-https://svillav.github.io/FullStack-news/
+https://svillav.github.io/from-scratch-news/
 ---
